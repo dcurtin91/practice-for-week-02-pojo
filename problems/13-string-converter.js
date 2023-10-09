@@ -12,7 +12,15 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
-  // Your code here
+  const countObject = {};
+  for (const char of string) {
+    if (countObject[char] === undefined) {
+      countObject[char] = 0;
+    } else {
+      countObject[char]++;
+    }
+  }
+  return countObject;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
